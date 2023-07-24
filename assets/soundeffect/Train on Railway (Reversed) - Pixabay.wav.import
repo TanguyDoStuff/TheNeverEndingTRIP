@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://np5jiqjqeou3"
+path="res://.godot/imported/Train on Railway (Reversed) - Pixabay.wav-fba48e9d2786ed957ecb797ee9bdb9d4.sample"
+
+[deps]
+
+source_file="res://assets/soundeffect/Train on Railway (Reversed) - Pixabay.wav"
+dest_files=["res://.godot/imported/Train on Railway (Reversed) - Pixabay.wav-fba48e9d2786ed957ecb797ee9bdb9d4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

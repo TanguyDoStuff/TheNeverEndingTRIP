@@ -1,0 +1,141 @@
+[gd_scene load_steps=25 format=3 uid="uid://cj1mtbt07d3yp"]
+
+[ext_resource type="Script" path="res://scripts/niveau/Rewind.gd" id="1_f5xb2"]
+[ext_resource type="Texture2D" uid="uid://bsp0hqboxcpsj" path="res://assets/ui/hourglass/hourglass0000.png" id="2_6vffr"]
+[ext_resource type="Texture2D" uid="uid://cu61dy2cox38r" path="res://assets/ui/hourglass/hourglass0001.png" id="3_p0uin"]
+[ext_resource type="Texture2D" uid="uid://jru0codapqx6" path="res://assets/ui/hourglass/hourglass0002.png" id="4_0reew"]
+[ext_resource type="Texture2D" uid="uid://cm57v8ak8rpmp" path="res://assets/ui/hourglass/hourglass0003.png" id="5_6colu"]
+[ext_resource type="Texture2D" uid="uid://deyv3limce35i" path="res://assets/ui/hourglass/hourglass0004.png" id="6_vpsc8"]
+[ext_resource type="Texture2D" uid="uid://u6qdrrae3ded" path="res://assets/ui/hourglass/hourglass0005.png" id="7_oo1jj"]
+[ext_resource type="Texture2D" uid="uid://b8uvgwbwghg7o" path="res://assets/ui/hourglass/hourglass0006.png" id="8_qwqm2"]
+[ext_resource type="Texture2D" uid="uid://b5dmxaxtty2nn" path="res://assets/ui/hourglass/hourglass0007.png" id="9_y2mww"]
+[ext_resource type="Texture2D" uid="uid://rimnp0t07jwa" path="res://assets/ui/hourglass/hourglass0008.png" id="10_urrmi"]
+[ext_resource type="Texture2D" uid="uid://pojpgxct64dv" path="res://assets/ui/hourglass/hourglass0009.png" id="11_3eomo"]
+[ext_resource type="Texture2D" uid="uid://bskjda60nx8o4" path="res://assets/ui/hourglass/hourglass0010.png" id="12_yn8th"]
+[ext_resource type="Texture2D" uid="uid://d0jvscvqppvm3" path="res://assets/ui/hourglass/hourglass0011.png" id="13_rw8mr"]
+[ext_resource type="Texture2D" uid="uid://dwe848c0tsiy0" path="res://assets/ui/hourglass/hourglass0012.png" id="14_x3rs6"]
+[ext_resource type="Texture2D" uid="uid://b5hgwxwmp2qny" path="res://assets/ui/hourglass/hourglass0013.png" id="15_k5o0d"]
+[ext_resource type="Texture2D" uid="uid://o7u84ntuew8u" path="res://assets/ui/hourglass/hourglass0014.png" id="16_82nwb"]
+[ext_resource type="Texture2D" uid="uid://dvidvb66a287o" path="res://assets/ui/hourglass/hourglass0015.png" id="17_5ibt4"]
+[ext_resource type="Texture2D" uid="uid://duajq15qbt3ci" path="res://assets/ui/hourglass/hourglass0016.png" id="18_l5leo"]
+[ext_resource type="Texture2D" uid="uid://cdilxfmph4m6m" path="res://assets/ui/hourglass/hourglass0017.png" id="19_afw2p"]
+[ext_resource type="Texture2D" uid="uid://bu4t60uphhp4o" path="res://assets/ui/hourglass/hourglass0018.png" id="20_eellf"]
+[ext_resource type="AudioStream" uid="uid://np5jiqjqeou3" path="res://assets/soundeffect/Train on Railway (Reversed) - Pixabay.wav" id="21_hsugw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2vj8l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6vffr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p0uin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0reew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6colu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vpsc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oo1jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qwqm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_y2mww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_urrmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3eomo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yn8th")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rw8mr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_x3rs6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_k5o0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_82nwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5ibt4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_l5leo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_afw2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_eellf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_lmshm"]
+resource_name = "Rewind"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hourglass:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(2, -0.25, 0, 0.25, 0, 6.88, -0.25, 0, 0.25, 0, 90, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.3, 1.8)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hourglass:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(2, -0.25, 0, 0.25, 0, 6.88, -0.25, 0, 0.25, 0, 90, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.3, 1.8)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kwxnu"]
+_data = {
+"Rewind": SubResource("Animation_lmshm")
+}
+
+[node name="Rewind" type="Node2D"]
+script = ExtResource("1_f5xb2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Hourglass" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_2vj8l")
+frame = 17
+frame_progress = 0.72791
+
+[node name="TrainSoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_hsugw")
+volume_db = -5.0
+autoplay = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kwxnu")
+}

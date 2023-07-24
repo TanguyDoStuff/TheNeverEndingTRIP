@@ -1,0 +1,114 @@
+[gd_scene load_steps=18 format=3 uid="uid://cunritvoq3py6"]
+
+[ext_resource type="Script" path="res://scripts/niveau/MenuPrincipal.gd" id="1_ums10"]
+[ext_resource type="FontFile" uid="uid://dwkgicu6dd0wx" path="res://assets/fonts/Nunito-Bold.ttf" id="2_5vhnq"]
+[ext_resource type="AudioStream" uid="uid://1306k3ddhq1g" path="res://assets/soundeffect/Train on Railway - Pixabay.wav" id="2_dn62t"]
+[ext_resource type="Script" path="res://scripts/niveau/ParallaxBackground.gd" id="3_nxyg5"]
+[ext_resource type="StyleBox" uid="uid://bym6src3dqlmr" path="res://assets/style/answerBoxFocus.tres" id="3_t7i1d"]
+[ext_resource type="Texture2D" uid="uid://dt4mgn3os1ajx" path="res://assets/world/bg/sky2.png" id="4_8sbni"]
+[ext_resource type="Texture2D" uid="uid://csj2qwdb3b12w" path="res://assets/world/bg/sky1.png" id="5_s0mfq"]
+[ext_resource type="Texture2D" uid="uid://d8kb80nlx064" path="res://assets/world/bg/grass.png" id="6_x3h0o"]
+[ext_resource type="Texture2D" uid="uid://co6jxldp2u21u" path="res://assets/wild/overlay.png" id="7_nplw8"]
+[ext_resource type="Texture2D" uid="uid://clhaecentwhyu" path="res://assets/wild/axe.png" id="7_v5xax"]
+[ext_resource type="Texture2D" uid="uid://b5r7ppmce6gvk" path="res://assets/wild/eat.png" id="8_ytnys"]
+[ext_resource type="Texture2D" uid="uid://btub14qnau3h6" path="res://assets/wild/logo.png" id="10_2jp2y"]
+[ext_resource type="Texture2D" uid="uid://b7t5n4l2aqa5b" path="res://assets/wild/Train.png" id="11_u8c1n"]
+[ext_resource type="Texture2D" uid="uid://2nxd46gobuxd" path="res://assets/logo.svg" id="12_qtq4w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hf5ei"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5sfrq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hq81c"]
+
+[node name="MenuPrincipal" type="Node2D"]
+script = ExtResource("1_ums10")
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+offset_left = 380.0
+offset_top = 532.0
+offset_right = 769.0
+offset_bottom = 633.0
+
+[node name="Start" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5vhnq")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("3_t7i1d")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hf5ei")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5sfrq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hq81c")
+theme_override_styles/focus = ExtResource("3_t7i1d")
+text = " Press L to Start "
+
+[node name="TrainSoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_dn62t")
+volume_db = -20.0
+autoplay = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("3_nxyg5")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(2, 1)
+motion_mirroring = Vector2(2753.75, 0)
+
+[node name="Sky2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(-865, -301)
+scale = Vector2(0.785, 0.785)
+texture = ExtResource("4_8sbni")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1.75, 1)
+motion_mirroring = Vector2(2753.75, 0)
+
+[node name="Sky1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(-865, -301)
+scale = Vector2(0.785, 0.785)
+texture = ExtResource("5_s0mfq")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1.5, 1)
+motion_mirroring = Vector2(2753.75, 0)
+
+[node name="Grass" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(-865, -301)
+scale = Vector2(0.785, 0.785)
+texture = ExtResource("6_x3h0o")
+centered = false
+
+[node name="overlay" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("7_nplw8")
+
+[node name="Axe" type="Sprite2D" parent="."]
+position = Vector2(1692, 936)
+rotation = 0.070048
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("7_v5xax")
+
+[node name="Eat" type="Sprite2D" parent="."]
+position = Vector2(1464, 931)
+rotation = -0.161717
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("8_ytnys")
+
+[node name="logo" type="Sprite2D" parent="."]
+position = Vector2(1556, 251)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_2jp2y")
+
+[node name="Train" type="Sprite2D" parent="."]
+position = Vector2(1556, 543)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_u8c1n")
+
+[node name="Logo" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(515, 329)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("12_qtq4w")
+
+[connection signal="pressed" from="Buttons/Start" to="." method="_on_start_pressed"]

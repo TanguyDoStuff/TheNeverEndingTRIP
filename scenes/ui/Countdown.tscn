@@ -1,0 +1,120 @@
+[gd_scene load_steps=24 format=3 uid="uid://82b3mlulxdto"]
+
+[ext_resource type="FontFile" uid="uid://c4esoipk55jky" path="res://assets/fonts/Nunito-Black.ttf" id="1_mnx5c"]
+[ext_resource type="Script" path="res://scripts/ui/Countdown.gd" id="1_o8tnh"]
+[ext_resource type="Texture2D" uid="uid://bsp0hqboxcpsj" path="res://assets/ui/hourglass/hourglass0000.png" id="2_qo672"]
+[ext_resource type="Texture2D" uid="uid://cu61dy2cox38r" path="res://assets/ui/hourglass/hourglass0001.png" id="3_qciy3"]
+[ext_resource type="Texture2D" uid="uid://jru0codapqx6" path="res://assets/ui/hourglass/hourglass0002.png" id="4_ef4n6"]
+[ext_resource type="Texture2D" uid="uid://cm57v8ak8rpmp" path="res://assets/ui/hourglass/hourglass0003.png" id="5_4y8ok"]
+[ext_resource type="Texture2D" uid="uid://deyv3limce35i" path="res://assets/ui/hourglass/hourglass0004.png" id="6_heudp"]
+[ext_resource type="Texture2D" uid="uid://u6qdrrae3ded" path="res://assets/ui/hourglass/hourglass0005.png" id="7_wwa0c"]
+[ext_resource type="Texture2D" uid="uid://b8uvgwbwghg7o" path="res://assets/ui/hourglass/hourglass0006.png" id="8_frfsr"]
+[ext_resource type="Texture2D" uid="uid://b5dmxaxtty2nn" path="res://assets/ui/hourglass/hourglass0007.png" id="9_mttsg"]
+[ext_resource type="Texture2D" uid="uid://rimnp0t07jwa" path="res://assets/ui/hourglass/hourglass0008.png" id="10_eyn4b"]
+[ext_resource type="Texture2D" uid="uid://pojpgxct64dv" path="res://assets/ui/hourglass/hourglass0009.png" id="11_cwp11"]
+[ext_resource type="Texture2D" uid="uid://bskjda60nx8o4" path="res://assets/ui/hourglass/hourglass0010.png" id="12_o45xc"]
+[ext_resource type="Texture2D" uid="uid://d0jvscvqppvm3" path="res://assets/ui/hourglass/hourglass0011.png" id="13_7weha"]
+[ext_resource type="Texture2D" uid="uid://dwe848c0tsiy0" path="res://assets/ui/hourglass/hourglass0012.png" id="14_siedj"]
+[ext_resource type="Texture2D" uid="uid://b5hgwxwmp2qny" path="res://assets/ui/hourglass/hourglass0013.png" id="15_e4qf5"]
+[ext_resource type="Texture2D" uid="uid://o7u84ntuew8u" path="res://assets/ui/hourglass/hourglass0014.png" id="16_q8em8"]
+[ext_resource type="Texture2D" uid="uid://dvidvb66a287o" path="res://assets/ui/hourglass/hourglass0015.png" id="17_fljwd"]
+[ext_resource type="Texture2D" uid="uid://duajq15qbt3ci" path="res://assets/ui/hourglass/hourglass0016.png" id="18_ugyn0"]
+[ext_resource type="Texture2D" uid="uid://cdilxfmph4m6m" path="res://assets/ui/hourglass/hourglass0017.png" id="19_bqy1i"]
+[ext_resource type="Texture2D" uid="uid://bu4t60uphhp4o" path="res://assets/ui/hourglass/hourglass0018.png" id="20_dbxsi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ojab8"]
+font = ExtResource("1_mnx5c")
+font_size = 121
+font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+outline_size = 12
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ip2wi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qo672")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qciy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ef4n6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4y8ok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_heudp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wwa0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_frfsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mttsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_eyn4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cwp11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_o45xc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7weha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_siedj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_e4qf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_q8em8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_fljwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ugyn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_bqy1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_dbxsi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.15
+}]
+
+[node name="Countdown" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 56.0
+offset_top = -60.0
+offset_right = 465.0
+offset_bottom = 61.0
+grow_vertical = 2
+text = "2:00"
+label_settings = SubResource("LabelSettings_ojab8")
+vertical_alignment = 1
+script = ExtResource("1_o8tnh")
+
+[node name="Timer" type="Timer" parent="Label"]
+wait_time = 120.0
+autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ip2wi")
+
+[connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]

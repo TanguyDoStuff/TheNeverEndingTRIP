@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://cq0kubw1jd4e"]
+
+[ext_resource type="Script" path="res://scripts/perso/Sidekick.gd" id="1_d4bl5"]
+[ext_resource type="Texture2D" uid="uid://ce5e1jvejbie1" path="res://assets/char/Sidekick/idle_book0000.png" id="2_041lf"]
+[ext_resource type="Texture2D" uid="uid://61fbmx1pg718" path="res://assets/char/Sidekick/idle_book0001.png" id="3_ex830"]
+[ext_resource type="Texture2D" uid="uid://dbneibymrjngi" path="res://assets/char/Sidekick/idle_follow0000.png" id="4_s6udt"]
+[ext_resource type="Texture2D" uid="uid://dr3al0buy153a" path="res://assets/char/Sidekick/idle_follow0001.png" id="5_anlg3"]
+[ext_resource type="Texture2D" uid="uid://djcf6dxsbvtps" path="res://assets/char/Sidekick/walk0000.png" id="6_4t4qj"]
+[ext_resource type="Texture2D" uid="uid://bkbtac8x1l1m6" path="res://assets/char/Sidekick/walk0001.png" id="7_bhyn8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lppn6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_041lf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ex830")
+}],
+"loop": true,
+"name": &"idle_book",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_s6udt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_anlg3")
+}],
+"loop": true,
+"name": &"idle_follow",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_4t4qj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s6udt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bhyn8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_anlg3")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tiok"]
+size = Vector2(59, 288)
+
+[node name="Sidekick" type="Node2D"]
+
+[node name="SidekickModel" type="CharacterBody2D" parent="."]
+position = Vector2(-2, 0)
+scale = Vector2(1.25, 1.25)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_d4bl5")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="SidekickModel"]
+scale = Vector2(0.479377, 0.479377)
+sprite_frames = SubResource("SpriteFrames_lppn6")
+animation = &"idle_book"
+
+[node name="Collision" type="CollisionShape2D" parent="SidekickModel"]
+shape = SubResource("RectangleShape2D_1tiok")

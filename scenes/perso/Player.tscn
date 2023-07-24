@@ -1,0 +1,75 @@
+[gd_scene load_steps=12 format=3 uid="uid://by7byhr18jpew"]
+
+[ext_resource type="Script" path="res://scripts/perso/Player.gd" id="1_jb07p"]
+[ext_resource type="PackedScene" uid="uid://bebif7ot6a2bg" path="res://scenes/UI.tscn" id="2_71qw6"]
+[ext_resource type="Texture2D" uid="uid://cdqust3w4se6l" path="res://assets/char/Player/idle0000.png" id="2_x8gnx"]
+[ext_resource type="Texture2D" uid="uid://b6mxcink0dy38" path="res://assets/char/Player/idle0001.png" id="3_kibmk"]
+[ext_resource type="Texture2D" uid="uid://bvs426hcrkvpu" path="res://assets/char/Player/walk0000.png" id="4_wi5mf"]
+[ext_resource type="Texture2D" uid="uid://7m62a34ytrg5" path="res://assets/char/Player/walk0001.png" id="5_gltvf"]
+[ext_resource type="Texture2D" uid="uid://ca3uu53jypm0x" path="res://assets/char/Player/walk0002.png" id="6_3bh4v"]
+[ext_resource type="Texture2D" uid="uid://cevblap7nu26e" path="res://assets/char/Player/walk0003.png" id="7_52r8o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rivi1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x8gnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kibmk")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_wi5mf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gltvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3bh4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_52r8o")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pll44"]
+size = Vector2(59, 288)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yed8a"]
+size = Vector2(103.081, 289)
+
+[node name="Player" type="Node2D"]
+
+[node name="PlayerModel" type="CharacterBody2D" parent="."]
+z_index = 999
+scale = Vector2(1.25, 1.25)
+script = ExtResource("1_jb07p")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="PlayerModel"]
+position = Vector2(8.3512, -9.33448)
+scale = Vector2(0.464203, 0.464203)
+sprite_frames = SubResource("SpriteFrames_rivi1")
+animation = &"Idle"
+frame_progress = 0.859008
+
+[node name="Collision" type="CollisionShape2D" parent="PlayerModel"]
+shape = SubResource("RectangleShape2D_pll44")
+
+[node name="InteractZone" type="Area2D" parent="PlayerModel"]
+position = Vector2(102, 0)
+
+[node name="Collision" type="CollisionShape2D" parent="PlayerModel/InteractZone"]
+position = Vector2(-20.7405, 0)
+shape = SubResource("RectangleShape2D_yed8a")
+debug_color = Color(0, 0.647059, 0.176471, 0.419608)
+
+[node name="UI" parent="." instance=ExtResource("2_71qw6")]
+position = Vector2(1, -90)

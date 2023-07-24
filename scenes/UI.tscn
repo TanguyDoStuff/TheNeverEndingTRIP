@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bebif7ot6a2bg"]
+
+[ext_resource type="Script" path="res://scripts/PlayerCamera.gd" id="1_3biyy"]
+[ext_resource type="PackedScene" uid="uid://37nxtvmfhn6a" path="res://scenes/ui/Pause.tscn" id="2_qnq22"]
+[ext_resource type="PackedScene" uid="uid://82b3mlulxdto" path="res://scenes/ui/Countdown.tscn" id="3_gxe4c"]
+[ext_resource type="PackedScene" uid="uid://cbl8t7tnh4el6" path="res://scenes/ui/dialogueBox.tscn" id="4_fvoxq"]
+
+[node name="UI" type="CharacterBody2D"]
+script = ExtResource("1_3biyy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Pause" parent="Camera2D" instance=ExtResource("2_qnq22")]
+process_mode = 3
+visible = false
+position = Vector2(-800, -450)
+
+[node name="Countdown" parent="Camera2D" instance=ExtResource("3_gxe4c")]
+position = Vector2(-901, -477)
+scale = Vector2(0.72, 0.72)
+
+[node name="dialogueBox" parent="Camera2D" instance=ExtResource("4_fvoxq")]
+z_index = 3000
+position = Vector2(-50, 300)

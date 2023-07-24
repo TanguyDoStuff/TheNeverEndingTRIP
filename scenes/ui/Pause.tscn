@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://37nxtvmfhn6a"]
+
+[ext_resource type="Script" path="res://scripts/ui/Pause.gd" id="1_pe05w"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1ipgt"]
+font_size = 100
+
+[node name="Pause" type="Node2D"]
+z_index = 4001
+position = Vector2(1, 0)
+script = ExtResource("1_pe05w")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 538.0
+offset_top = 41.0
+offset_right = 924.0
+offset_bottom = 181.0
+text = "PAUSED"
+label_settings = SubResource("LabelSettings_1ipgt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 4000
+offset_left = -1356.0
+offset_top = -1957.0
+offset_right = 3644.0
+offset_bottom = 3043.0
+color = Color(0, 0, 0, 0.231373)
+
+[node name="Button" type="VBoxContainer" parent="."]
+offset_left = 698.0
+offset_top = 192.0
+offset_right = 768.0
+offset_bottom = 258.0
+
+[node name="Resume" type="Button" parent="Button"]
+layout_mode = 2
+text = "Resume"
+
+[node name="Quit" type="Button" parent="Button"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="Button/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Button/Quit" to="." method="_on_quit_pressed"]

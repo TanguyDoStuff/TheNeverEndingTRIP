@@ -1,0 +1,228 @@
+[gd_scene load_steps=21 format=3 uid="uid://cbl8t7tnh4el6"]
+
+[ext_resource type="Texture2D" uid="uid://br6drjy28j2f7" path="res://assets/ui/DialogueBox.svg" id="1_ltvvy"]
+[ext_resource type="Texture2D" uid="uid://ptfa50s21vua" path="res://assets/portrait/placeholder.png" id="1_xn15m"]
+[ext_resource type="FontFile" uid="uid://dojis2maddy1j" path="res://assets/fonts/Nunito-Regular.ttf" id="2_dmmcl"]
+[ext_resource type="AudioStream" uid="uid://dl7vsyplxyhgw" path="res://assets/soundeffect/select.wav" id="3_hbj8q"]
+[ext_resource type="StyleBox" uid="uid://bym6src3dqlmr" path="res://assets/style/answerBoxFocus.tres" id="4_2fl4j"]
+[ext_resource type="FontFile" uid="uid://dwkgicu6dd0wx" path="res://assets/fonts/Nunito-Bold.ttf" id="4_rbn5n"]
+[ext_resource type="FontFile" uid="uid://bu8qdetnrr6s3" path="res://assets/fonts/Nunito-Italic.ttf" id="5_ekc7k"]
+[ext_resource type="FontFile" uid="uid://baw6fpq8a4sl5" path="res://assets/fonts/Nunito-BoldItalic.ttf" id="6_mhiln"]
+[ext_resource type="AudioStream" uid="uid://dgc6n7bawebwc" path="res://assets/soundeffect/next.wav" id="9_idqen"]
+
+[sub_resource type="Animation" id="Animation_2h8ep"]
+resource_name = "appear"
+length = 0.3
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Answers:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Answers:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="Animation" id="Animation_6qbtb"]
+resource_name = "disappear"
+length = 0.3
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Answers:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Answers:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_56ver"]
+_data = {
+"appear": SubResource("Animation_2h8ep"),
+"disappear": SubResource("Animation_6qbtb")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_li26h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h6ckd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sf8h3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mdkfr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ylumy"]
+
+[sub_resource type="Animation" id="Animation_ebsm6"]
+resource_name = "appear"
+length = 0.3
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="Animation" id="Animation_ybp18"]
+resource_name = "disappear"
+length = 0.3
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.45, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.45, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k6v8k"]
+_data = {
+"appear": SubResource("Animation_ebsm6"),
+"disappear": SubResource("Animation_ybp18")
+}
+
+[node name="dialogueBox" type="Node2D"]
+scale = Vector2(1e-05, 1e-05)
+
+[node name="Portrait" type="Sprite2D" parent="."]
+position = Vector2(-1015.78, -1097.11)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("1_xn15m")
+
+[node name="DialogueBox" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_ltvvy")
+
+[node name="Answers" type="Node2D" parent="."]
+z_index = -1
+scale = Vector2(1e-05, 1e-05)
+
+[node name="Select" type="AudioStreamPlayer" parent="Answers"]
+stream = ExtResource("3_hbj8q")
+
+[node name="AnswerBox" type="Sprite2D" parent="Answers"]
+modulate = Color(0.898039, 1, 1, 1)
+texture_filter = 1
+position = Vector2(1090.8, -711.111)
+rotation = 3.14159
+scale = Vector2(0.400352, 0.555)
+texture = ExtResource("1_ltvvy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Answers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_56ver")
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Answers"]
+offset_left = 506.667
+offset_top = -913.333
+offset_right = 713.667
+offset_bottom = -535.333
+
+[node name="Option1" type="Button" parent="Answers/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_dmmcl")
+theme_override_font_sizes/font_size = 136
+theme_override_styles/normal = SubResource("StyleBoxEmpty_li26h")
+theme_override_styles/hover = ExtResource("4_2fl4j")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_h6ckd")
+theme_override_styles/focus = ExtResource("4_2fl4j")
+text = "Yes"
+
+[node name="Option2" type="Button" parent="Answers/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_dmmcl")
+theme_override_font_sizes/font_size = 136
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sf8h3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mdkfr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ylumy")
+theme_override_styles/focus = ExtResource("4_2fl4j")
+text = "No"
+
+[node name="Text" type="RichTextLabel" parent="."]
+offset_left = -1433.0
+offset_top = -373.0
+offset_right = 1438.0
+offset_bottom = 420.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_dmmcl")
+theme_override_fonts/bold_font = ExtResource("4_rbn5n")
+theme_override_fonts/italics_font = ExtResource("5_ekc7k")
+theme_override_fonts/bold_italics_font = ExtResource("6_mhiln")
+theme_override_font_sizes/normal_font_size = 136
+theme_override_font_sizes/bold_font_size = 136
+theme_override_font_sizes/italics_font_size = 136
+theme_override_font_sizes/bold_italics_font_size = 136
+bbcode_enabled = true
+text = "This text... is....
+Not supposed to appear?"
+shortcut_keys_enabled = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_k6v8k")
+}
+
+[node name="TextScrollTimer" type="Timer" parent="."]
+wait_time = 0.005
+
+[node name="Next" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_idqen")

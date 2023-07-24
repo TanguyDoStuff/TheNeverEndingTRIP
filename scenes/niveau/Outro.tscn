@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://duyadiuf3tp1u"]
+
+[ext_resource type="Script" path="res://scripts/niveau/OutroDialogue.gd" id="1_p0dt6"]
+[ext_resource type="PackedScene" uid="uid://cbl8t7tnh4el6" path="res://scenes/ui/dialogueBox.tscn" id="2_4l3yf"]
+[ext_resource type="AudioStream" uid="uid://1306k3ddhq1g" path="res://assets/soundeffect/Train on Railway - Pixabay.wav" id="3_x30gh"]
+[ext_resource type="AudioStream" uid="uid://1cw1uclucd1o" path="res://assets/music/WatR - Fluid.mp3" id="4_pry0m"]
+
+[node name="Outro" type="Node2D"]
+script = ExtResource("1_p0dt6")
+NPC_id = "outro"
+
+[node name="dialogueBox" parent="." instance=ExtResource("2_4l3yf")]
+position = Vector2(960, 540)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="TrainSoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_x30gh")
+volume_db = -20.0
+autoplay = true
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_pry0m")
+autoplay = true

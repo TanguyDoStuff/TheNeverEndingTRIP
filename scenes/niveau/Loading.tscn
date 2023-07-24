@@ -1,0 +1,95 @@
+[gd_scene load_steps=22 format=3 uid="uid://ygvbik2b7y0a"]
+
+[ext_resource type="Script" path="res://scripts/niveau/Loading.gd" id="1_n48mj"]
+[ext_resource type="Texture2D" uid="uid://bsp0hqboxcpsj" path="res://assets/ui/hourglass/hourglass0000.png" id="2_o0k0c"]
+[ext_resource type="Texture2D" uid="uid://cu61dy2cox38r" path="res://assets/ui/hourglass/hourglass0001.png" id="3_wsfp0"]
+[ext_resource type="Texture2D" uid="uid://jru0codapqx6" path="res://assets/ui/hourglass/hourglass0002.png" id="4_mmve0"]
+[ext_resource type="Texture2D" uid="uid://cm57v8ak8rpmp" path="res://assets/ui/hourglass/hourglass0003.png" id="5_omcbe"]
+[ext_resource type="Texture2D" uid="uid://deyv3limce35i" path="res://assets/ui/hourglass/hourglass0004.png" id="6_s1ehl"]
+[ext_resource type="Texture2D" uid="uid://u6qdrrae3ded" path="res://assets/ui/hourglass/hourglass0005.png" id="7_fodmp"]
+[ext_resource type="Texture2D" uid="uid://b8uvgwbwghg7o" path="res://assets/ui/hourglass/hourglass0006.png" id="8_o154o"]
+[ext_resource type="Texture2D" uid="uid://b5dmxaxtty2nn" path="res://assets/ui/hourglass/hourglass0007.png" id="9_038y0"]
+[ext_resource type="Texture2D" uid="uid://rimnp0t07jwa" path="res://assets/ui/hourglass/hourglass0008.png" id="10_eba12"]
+[ext_resource type="Texture2D" uid="uid://pojpgxct64dv" path="res://assets/ui/hourglass/hourglass0009.png" id="11_8pe4n"]
+[ext_resource type="Texture2D" uid="uid://bskjda60nx8o4" path="res://assets/ui/hourglass/hourglass0010.png" id="12_33upr"]
+[ext_resource type="Texture2D" uid="uid://d0jvscvqppvm3" path="res://assets/ui/hourglass/hourglass0011.png" id="13_j4nrf"]
+[ext_resource type="Texture2D" uid="uid://dwe848c0tsiy0" path="res://assets/ui/hourglass/hourglass0012.png" id="14_3nvmw"]
+[ext_resource type="Texture2D" uid="uid://b5hgwxwmp2qny" path="res://assets/ui/hourglass/hourglass0013.png" id="15_1j7fd"]
+[ext_resource type="Texture2D" uid="uid://o7u84ntuew8u" path="res://assets/ui/hourglass/hourglass0014.png" id="16_v6eyv"]
+[ext_resource type="Texture2D" uid="uid://dvidvb66a287o" path="res://assets/ui/hourglass/hourglass0015.png" id="17_dgwfp"]
+[ext_resource type="Texture2D" uid="uid://duajq15qbt3ci" path="res://assets/ui/hourglass/hourglass0016.png" id="18_k8p0r"]
+[ext_resource type="Texture2D" uid="uid://cdilxfmph4m6m" path="res://assets/ui/hourglass/hourglass0017.png" id="19_cin5y"]
+[ext_resource type="Texture2D" uid="uid://bu4t60uphhp4o" path="res://assets/ui/hourglass/hourglass0018.png" id="20_toe7v"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_38lis"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o0k0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wsfp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mmve0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_omcbe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_s1ehl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fodmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_o154o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_038y0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_eba12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8pe4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_33upr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_j4nrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3nvmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1j7fd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_v6eyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_dgwfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_k8p0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cin5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_toe7v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 18.0
+}]
+
+[node name="Loading" type="Node2D"]
+script = ExtResource("1_n48mj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1844, 997)
+sprite_frames = SubResource("SpriteFrames_38lis")

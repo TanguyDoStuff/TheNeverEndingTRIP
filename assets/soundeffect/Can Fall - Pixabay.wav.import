@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bpru4knthtwv6"
+path="res://.godot/imported/Can Fall - Pixabay.wav-f76bdea8960833a608785bfe94025419.sample"
+
+[deps]
+
+source_file="res://assets/soundeffect/Can Fall - Pixabay.wav"
+dest_files=["res://.godot/imported/Can Fall - Pixabay.wav-f76bdea8960833a608785bfe94025419.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
